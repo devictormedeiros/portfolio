@@ -1,3 +1,4 @@
+jQuery(document).ready(function ($) {
 const $arrow = document.querySelector('.arrow i');
 $arrow.animate([
     { top: '0' },
@@ -135,4 +136,6 @@ $(function () {
             $("header").removeClass("fixed-top");
         }
     });
+});
+
 });

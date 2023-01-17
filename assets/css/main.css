@@ -669,13 +669,12 @@ body .skills .lista-skills {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
 }
 body .skills .lista-skills .skill {
   transition: all 0.5s ease-in-out;
   text-align: center;
-  width: 12.2857142857%;
-  margin: 1%;
+  width: 18%;
+  margin: 1% 1% 20px;
 }
 body .skills .lista-skills .skill img {
   width: 70px;

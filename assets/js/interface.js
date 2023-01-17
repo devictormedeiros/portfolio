@@ -16,7 +16,7 @@ function maquinaEscrever(texto) {
     textoArr.forEach((letra, i) => {
         setTimeout(function () {
             texto.innerHTML += letra
-        }, 100 * i);
+        }, 60 * i);
 
     });
 }

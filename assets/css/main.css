@@ -483,7 +483,7 @@ body .about-us .text .btnConheca i {
   position: relative;
 }
 body .portfolio {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--BgSecundario);
 }
 body .portfolio h3 {
@@ -566,7 +566,7 @@ body .portfolio .slider-projetos .projeto-item:hover .info-hover {
   display: flex;
 }
 body .carreira {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 body .carreira h3 {
   font-size: 2.625rem;
@@ -588,7 +588,7 @@ body .carreira h3:after {
   left: 0;
 }
 body .diferenciais {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 body .diferenciais .row {
   justify-content: center;
@@ -647,7 +647,7 @@ body .diferenciais .slider-diferenciais .box .text p {
   font-size: 0.9375rem;
 }
 body .skills {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--BgSecundario);
 }
 body .skills h3 {
@@ -673,12 +673,28 @@ body .skills .lista-skills {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 50px;
+}
+body .skills .lista-skills h3 {
+  width: 100%;
+  margin: 10px 0 40px;
+  font-size: 20px;
+}
+body .skills .lista-skills h3:after {
+  width: 100%;
 }
 body .skills .lista-skills .skill {
-  transition: all 0.5s ease-in-out;
   text-align: center;
-  width: 18%;
+  width: 14.6666666667%;
   margin: 1% 1% 20px;
+}
+body .skills .lista-skills .skill .progress {
+  height: 5px;
+  width: 60%;
+  margin: 10px auto 0 auto;
+}
+body .skills .lista-skills .skill .progress .progress-bar {
+  background-color: #4ec9b0;
 }
 body .skills .lista-skills .skill img {
   width: 70px;
@@ -689,16 +705,20 @@ body .skills .lista-skills .skill img {
 }
 body .skills .lista-skills .skill p {
   font-size: 0.9375rem;
-  transition: all 0.5s ease-in-out;
 }
 body .skills .lista-skills .skill:hover {
+  cursor: pointer;
+}
+body .skills .lista-skills .skill:hover img {
   transform: scale(1.1, 1.1);
+  transition: all 0.5s ease-in-out;
 }
 body .skills .lista-skills .skill:hover p {
   color: #4ec9b0;
+  transition: all 0.5s ease-in-out;
 }
 body .formacao {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 body .formacao h3 {
   font-size: 2.625rem;

@@ -424,6 +424,8 @@ body .about-us .avatar {
   border-radius: 100%;
   -webkit-animation: spin 10s infinite linear;
           animation: spin 10s infinite linear;
+  width: 300px;
+  height: 300px;
 }
 body .about-us .avatar .image {
   border-radius: 100%;
@@ -436,7 +438,8 @@ body .about-us .avatar .image {
   border-radius: 100%;
 }
 body .about-us .avatar .image img {
-  width: 95%;
+  width: 290px;
+  height: 290px;
   border-radius: 100%;
   margin: 0 auto;
 }

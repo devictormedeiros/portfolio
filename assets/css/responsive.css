@@ -1,7 +1,9 @@
 @media screen and (max-width: 600px) {
   body .about-us .avatar {
-    width: 65%;
-    margin-bottom: 20px;
+    width: 190px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
   }
   body .about-us .text p {
     font-size: 1.125rem;
@@ -168,6 +170,10 @@
   }
   body .skills .lista-skills .skill p {
     margin-top: 10px;
+  }
+  body .about-us .avatar .image img {
+    width: 190px;
+    height: 190px;
   }
 }
 .line {

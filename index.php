@@ -1,24 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 
-<head>
-    <title>DEV.ictormedeiros - Portfólio</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Site profissional de Victor Medeiros, desenvolvedor Front-end há 4 anos. Desenvolvido para exibir um breve relato sobre mim e minha trajetória na área de web">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Victor Medeiros">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
-            shrink-to-fit=no">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" id="font-awesome-css-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css?ver=6.1.1" type="text/css" media="all">
-
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-
+<?php include 'includes/head.php';?>
 <body>
     <header>
         <div class="top-bar">
@@ -54,7 +37,8 @@
 
             <nav class="navbar navbar-expand-lg">
 
-                <a class="navbar-brand" title="Dev.ictor" href="javascript:;"> <span><</span>Dev.ictor<span>/></span></a>
+                <a class="navbar-brand" title="Dev.ictor" href="javascript:;"> <span>
+                        <</span>Dev.ictor<span>/></span></a>
                 <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle
                         navigation">
                     <svg width="50" height="50" viewBox="0 0 100 100">
@@ -464,6 +448,48 @@
                 </div>
             </div>
         </section>
+        <?php
+        $certificados_arr =  array(
+            array(
+                'titulo' => 'Javascript',
+                'imagem' => 'assets/img/certificados/javascript-coderhouse.jpg',
+                'data' => '01/12/2023'
+            ),
+            array(
+                'titulo' => 'HTML / CSS',
+                'imagem' => 'assets/img/certificados/html-css-min.jpg',
+                'data' => '05/13/2022'
+            ),
+            array(
+                'titulo' => 'Javascript',
+                'imagem' => 'assets/img/certificados/javascript-min.jpg',
+                'data' => '01/20/2022'
+            ),
+            array(
+                'titulo' => 'Javascript - Orientação em objetos',
+                'imagem' => 'assets/img/certificados/javascript-obj.jpg',
+                'data' => '02/22/2022'
+            ),
+            array(
+                'titulo' => 'React JS',
+                'imagem' => 'assets/img/certificados/react-js-min.jpg',
+                'data' => '06/07/2020'
+            ),
+            array(
+                'titulo' => 'React Typescript',
+                'imagem' => 'assets/img/certificados/react-min.jpg',
+                'data' => '08/28/2022'
+            ),
+            array(
+                'titulo' => 'HTTP - Entendendo a web por baixo dos panos',
+                'imagem' => 'assets/img/certificados/http-certificado-min.jpg',
+                'data' => '02/11/2023'
+            )
+        );
+        usort($certificados_arr, function ($a, $b) {
+         return strtotime($b['data']) <=> strtotime($a['data']);
+        });
+        ?>
         <section class="formacao" id="sec-6">
             <div class="container">
                 <div class="row">
@@ -472,36 +498,18 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link active " id="v-pills-0-tab" data-toggle="pill" data-target="#v-pills-0" type="button" role="tab" aria-controls="v-pills-5" aria-selected="true">Javascript</button>
-                            <button class="nav-link " id="v-pills-1-tab " data-toggle="pill" data-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="false">HTML / CSS</span></button>
-                            <button class="nav-link" id="v-pills-2-tab" data-toggle="pill" data-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false">Javascript</button>
-                            <button class="nav-link" id="v-pills-3-tab" data-toggle="pill" data-target="#v-pills-3" type="button" role="tab" aria-controls="v-pills-3" aria-selected="false">Javascript - Orientação em objetos</button>
-                            <button class="nav-link " id="v-pills-4-tab" data-toggle="pill" data-target="#v-pills-4" type="button" role="tab" aria-controls="v-pills-4" aria-selected="true">React JS</button>
-                            <button class="nav-link " id="v-pills-5-tab" data-toggle="pill" data-target="#v-pills-5" type="button" role="tab" aria-controls="v-pills-5" aria-selected="true">React Typescript</button>
-  
+                            <?php foreach ($certificados_arr as $count => $certificado) : ?>
+                                <button class="nav-link <?php echo $count == 0 ? 'active':'';?> " id="v-pills-<?php echo $count;?>-tab" data-toggle="pill" data-target="#v-pills-<?php echo $count;?>" type="button" role="tab" aria-controls="v-pills-5" aria-selected="true"><?php echo $certificado['titulo'];?></button>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-0" role="tabpanel" aria-labelledby="v-pills--tab">
-                                <img src="assets/img/certificados/javascript-coderhouse.png" alt="">
+                        <?php foreach ($certificados_arr as $count => $certificado) : ?>
+                            <div class="tab-pane fade <?php echo $count == 0 ? 'show active':'';?>" id="v-pills-<?php echo $count;?>" role="tabpanel" aria-labelledby="v-pills-<?php echo $count;?>-tab">
+                                <img src="<?php echo $certificado['imagem'];?>" alt="">
                             </div>
-                            <div class="tab-pane fade " id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
-                                <img src="assets/img/certificados/html-css-min.jpg" alt="">
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
-                                <img src="assets/img/certificados/javascript-min.jpg" alt="">
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-                                <img src="assets/img/certificados/javascript-obj.jpg" alt="">
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
-                                <img src="assets/img/certificados/react-js-min.jpg" alt="">
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
-                                <img src="assets/img/certificados/react-min.jpg" alt="">
-                            </div>
-
+                        <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -509,34 +517,7 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="contactFloat">
-            <div class="contactFloat__btn pulse-button"></div>
-            <div class="contactFloat__menu">
-                <h3>Entre em contato</h3>
-                <a href="https://wa.me/5511964603824" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
-                <a href="mailto:contato@devictormedeiros.com"><i class="far fa-envelope"></i>contato@devictormedeiros.com</a>
-                <a href="https://www.linkedin.com/in/victor-medeiros-69b825b0/" target="_blank"><i class="fab fa-linkedin-in"></i>Linkedin</a>
-                <a href="https://github.com/devictormedeiros" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-            </div>
-        </div>
-    </footer>
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="assets/js/interface.js"></script>
-    <script src="assets/js/gtranslate.js"></script>
+    <?php include 'includes/footer.php';?>
 </body>
 
 </html>

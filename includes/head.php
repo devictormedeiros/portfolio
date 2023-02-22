@@ -1,4 +1,13 @@
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D6SBND36GW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D6SBND36GW');
+</script>
     <title>DEV.ictormedeiros - Portfólio</title>
     <meta charset="UTF-8">
     <meta name="description" content="Site profissional de Victor Medeiros, desenvolvedor Front-end há 4 anos. Desenvolvido para exibir um breve relato sobre mim e minha trajetória na área de web">

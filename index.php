@@ -484,6 +484,11 @@
                 'titulo' => 'HTTP - Entendendo a web por baixo dos panos',
                 'imagem' => 'assets/img/certificados/http-certificado-min.jpg',
                 'data' => '02/11/2023'
+            ),
+            array(
+                'titulo' => 'ORGANIZAÇÃO DE EQUIPES ÁGEIS: OS PAPÉIS EXISTENTES EM UMA EQUIPE',
+                'imagem' => 'assets/img/certificados/certificado-agil.webp',
+                'data' => '02/27/2023'
             )
         );
         usort($certificados_arr, function ($a, $b) {

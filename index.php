@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-12 top-nav">
                         <div class="contraste">
-                            <a href="javascript:;" title="Contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</a>
+                            <a href="javascript:;" title="Contraste"><i class="fa-solid fa-circle-half-stroke"></i> Modo Claro</a>
                         </div>
                         <div class="acessibilidade">
                             <a href="" class="small-font" title="Diminuir fonte">A-</a>

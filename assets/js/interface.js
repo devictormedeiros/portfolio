@@ -113,7 +113,7 @@ $('.small-font').on('click', function (e) {
     }
 });
 
-$('.contraste').on('click', function (e) {
+$('.contraste a').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('theme-ligth');
     $(this).text(function(i, text){

@@ -489,6 +489,11 @@
                 'titulo' => 'Organização de Equipes Ágeis: os papéis existentes em uma equipe',
                 'imagem' => 'assets/img/certificados/certificado-agil.webp',
                 'data' => '02/27/2023'
+            ),
+            array(
+                'titulo' => 'SEO: Plataforma CMS',
+                'imagem' => 'assets/img/certificados/certificado-seo-cms-min.webp',
+                'data' => '02/28/2023'
             )
         );
         usort($certificados_arr, function ($a, $b) {

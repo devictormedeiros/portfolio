@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-12 top-nav">
                         <div class="contraste">
-                            <a href="javascript:;" title="Contraste"><i class="fa-solid fa-circle-half-stroke"></i> Tema Claro</a>
+                            <a href="javascript:;" title="Contraste"><i class="fa-solid fa-circle-half-stroke"></i> Alto contraste</a>
                         </div>
                         <div class="acessibilidade">
                             <a href="" class="small-font" title="Diminuir fonte">A-</a>
@@ -486,7 +486,7 @@
                 'data' => '02/11/2023'
             ),
             array(
-                'titulo' => 'Organização de Equipes Ágeis: os papéis existentes em uma equipe',
+                'titulo' => 'ORGANIZAÇÃO DE EQUIPES ÁGEIS: OS PAPÉIS EXISTENTES EM UMA EQUIPE',
                 'imagem' => 'assets/img/certificados/certificado-agil.webp',
                 'data' => '02/27/2023'
             )

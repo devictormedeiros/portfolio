@@ -113,10 +113,12 @@ $('.small-font').on('click', function (e) {
     }
 });
 
-// CONTRASTE 
-$('.contraste a').on('click', function (e) {
+$('.contraste').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('theme-ligth');
+    $(this).text(function(i, text){
+        return text === "Tema Claro" ? "Tema Escuro" : "Tema Claro";
+    });
 })
 
 // MENU MOBILE 

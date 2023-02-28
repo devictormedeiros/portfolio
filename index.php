@@ -486,7 +486,7 @@
                 'data' => '02/11/2023'
             ),
             array(
-                'titulo' => 'ORGANIZAÇÃO DE EQUIPES ÁGEIS: OS PAPÉIS EXISTENTES EM UMA EQUIPE',
+                'titulo' => 'Organização de Equipes Ágeis: os papéis existentes em uma equipe',
                 'imagem' => 'assets/img/certificados/certificado-agil.webp',
                 'data' => '02/27/2023'
             )
